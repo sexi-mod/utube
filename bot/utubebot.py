@@ -1,4 +1,5 @@
-from pyrogram import Client  # Import Client from pyrogram
+import os
+from pyrogram import Client
 from .config import Config
 
 class UtubeBot(Client):
@@ -27,9 +28,10 @@ class UtubeBot(Client):
         # Handle incoming messages
         pass
 
-    def example_function(self):
-        print("Example function called.")
-
 # This part of the code should not be in the utubebot.py file
 if __name__ == "__main__":
-    from pyrogram import Client
+    # Initialize the bot
+    bot = UtubeBot()
+
+    # Start the bot
+    bot.run()
