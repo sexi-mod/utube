@@ -1,3 +1,6 @@
+from pyrogram import Client  # Import Client from pyrogram
+from .config import Config
+
 class UtubeBot(Client):
     def __init__(self):
         name = Config.SESSION_NAME
@@ -24,7 +27,9 @@ class UtubeBot(Client):
         # Handle incoming messages
         pass
 
-    # Example function that caused SyntaxError
     def example_function(self):
-        # Corrected function with proper syntax
         print("Example function called.")
+
+# This part of the code should not be in the utubebot.py file
+if __name__ == "__main__":
+    from pyrogram import Client
